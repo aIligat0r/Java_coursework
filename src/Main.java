@@ -89,6 +89,7 @@ public class Main {
         System.out.println("/add - add person");
         System.out.println("/del - delete persons");
         System.out.println("/getmax - get person, who have max DEBT");
+        System.out.println("/getmin - get person, who have min DEBT");
         System.out.println("/exit - exit");
         }
 }
