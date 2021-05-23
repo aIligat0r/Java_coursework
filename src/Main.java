@@ -30,7 +30,7 @@ public class Main {
 
             System.out.println("\nCommand:");
             answer = in.next();
-            if(answer.equals("/end")) break;
+            if(answer.equals("/exit")) break;
 
             try {
                 switch (answer) {
@@ -75,10 +75,6 @@ public class Main {
                         System.out.println("\n");
 
                         break;
-
-                    case "/exit":
-                        System.out.println("[Exit]");
-                        System.exit(0);
                 }
             } catch(Exception e) {
                 System.out.println("Error!");
