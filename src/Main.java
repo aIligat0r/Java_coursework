@@ -21,16 +21,22 @@ public class Main {
                 1500
         ));
 
+        System.out.println("Commands list:");
+        help();
+
         String answer;
         do {
             Scanner in = new Scanner(System.in);
 
-            System.out.println("Command:");
+            System.out.println("\nCommand:");
             answer = in.next();
             if(answer.equals("/end")) break;
 
             try {
                 switch (answer) {
+                    case "/help":
+                        help();
+                        break;
                     case "/list":
                         manager.list();
                         System.out.println("\n");
@@ -69,6 +75,10 @@ public class Main {
                         System.out.println("\n");
 
                         break;
+
+                    case "/exit":
+                        System.out.println("[Exit]");
+                        System.exit(0);
                 }
             } catch(Exception e) {
                 System.out.println("Error!");
@@ -77,4 +87,12 @@ public class Main {
 
         } while(!answer.equals("/end"));
     }
+
+    private static void help(){
+        System.out.println("/list - show persons");
+        System.out.println("/add - add person");
+        System.out.println("/del - delete persons");
+        System.out.println("/getmax - get person, who have max DEBT");
+        System.out.println("/exit - exit");
+        }
 }
